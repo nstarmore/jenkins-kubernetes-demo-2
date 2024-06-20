@@ -12,6 +12,8 @@ pipeline {
         stage('Deploy App') {
             steps {
                 sh "kubectl apply -f todo.yaml"
+                sh "sleep 50"
+                sh "kubectl get svc todo"
             }
         }
     }
