@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        CSRF_TOKEN = credentials('Jenkins_Secret_Text_Token')
+        CSRF_TOKEN = credentials('CSRF_TOKEN')
     }
     stages {
         stage('Create Secret') {
